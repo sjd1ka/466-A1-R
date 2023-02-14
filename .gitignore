@@ -146,7 +146,7 @@ for(j in c(1:10)){
     fwd_matrix[j,i] <- uniroot(f,c(0,1))$root}}
 
 year <- c(2,3,4)
-plot(x = year,y = fwd_matrix[1,],type = "l", main = "ForwardRate Curve",col = "green", xlab ="Time(year)", ylab ="Forward Rate")
+plot(x = year,y = fwd_matrix[1,],type = "l", main = "ForwardRate Curve",col = "green", xlab ="Time(year)", ylab ="Forward Rate", ylim = c(0.01,0.1))
 colour = c("red","orange","yellow","beige","blue","purple","pink", "black", "grey")
 for(i in c(2:10)){
   lines(x = year, y = fwd_matrix[i,],type = "l", col = colour[i-1])}
